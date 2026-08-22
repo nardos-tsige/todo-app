@@ -1,0 +1,8 @@
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+  padding-bottom: 16px;
+  flex: 1;
+}

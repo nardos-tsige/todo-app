@@ -1,0 +1,360 @@
+.sidebar {
+  width: 260px;
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px;
+  overflow-y: auto;
+  flex-shrink: 0;
+  transition: background 0.4s ease, border-color 0.4s ease;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar-header {
+  margin-bottom: 28px;
+  padding: 0 4px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.logo h1 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+  transition: color 0.4s ease;
+}
+
+.logo-badge {
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  background: var(--bg-tertiary);
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  margin-left: 4px;
+  transition: all 0.4s ease;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.nav-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nav-section-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  padding: 0 8px 6px;
+  transition: color 0.4s ease;
+}
+
+.nav-item-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  text-align: left;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+}
+
+.nav-item:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.nav-item.active {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.nav-item svg {
+  flex-shrink: 0;
+  opacity: 0.7;
+  transition: all 0.25s ease;
+}
+
+.nav-item.active svg {
+  opacity: 1;
+  color: var(--brand-500);
+}
+
+.nav-label {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 13px;
+  transition: color 0.25s ease;
+}
+
+.nav-badge {
+  background: var(--bg-tertiary);
+  padding: 1px 8px;
+  border-radius: var(--radius-full);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: all 0.25s ease;
+}
+
+.nav-item.active .nav-badge {
+  background: var(--brand-500);
+  color: white;
+}
+
+.nav-active-indicator {
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 3px;
+  background: var(--gradient-primary);
+  border-radius: 0 var(--radius-full) var(--radius-full) 0;
+}
+
+.nav-delete {
+  position: absolute;
+  right: 2px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  transition: all 0.25s ease;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.nav-item-wrapper:hover .nav-delete {
+  opacity: 1;
+}
+
+.nav-delete:hover {
+  color: var(--priority-urgent);
+  background: var(--priority-urgent-bg);
+}
+
+.add-project-btn {
+  padding: 6px 12px;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.add-project-btn:hover {
+  color: var(--text-secondary);
+  background: var(--bg-hover);
+}
+
+.add-project-form {
+  padding: 8px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-sm);
+  transition: background 0.4s ease;
+}
+
+.add-project-form input {
+  width: 100%;
+  padding: 6px 10px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 13px;
+  margin-bottom: 6px;
+  transition: all 0.25s ease;
+}
+
+.add-project-form input:focus {
+  border-color: var(--brand-500);
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
+}
+
+.add-project-form input::placeholder {
+  color: var(--text-muted);
+}
+
+.form-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.form-actions button {
+  padding: 4px 10px;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.btn-add {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+.btn-add:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+}
+
+.btn-cancel {
+  background: transparent;
+  color: var(--text-muted);
+}
+
+.btn-cancel:hover {
+  background: var(--bg-hover);
+}
+
+.nav-footer {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-color);
+  transition: border-color 0.4s ease;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 16px;
+    position: relative;
+    overflow-x: auto;
+  }
+
+  .sidebar-header {
+    margin-bottom: 12px;
+  }
+  
+  .logo h1 {
+    font-size: 16px;
+  }
+  
+  .logo-badge {
+    display: none;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .nav-section {
+    flex: 0 0 auto;
+    min-width: 120px;
+  }
+
+  .nav-section-label {
+    display: none;
+  }
+
+  .nav-item {
+    padding: 6px 10px;
+    font-size: 12px;
+    gap: 6px;
+    flex: 0 0 auto;
+  }
+
+  .nav-badge {
+    display: none;
+  }
+  
+  .nav-active-indicator {
+    display: none;
+  }
+
+  .add-project-btn {
+    display: none;
+  }
+
+  .add-project-form {
+    display: none;
+  }
+  
+  .nav-delete {
+    opacity: 1;
+    position: relative;
+    right: 0;
+  }
+  
+  .nav-item-wrapper {
+    flex: 0 0 auto;
+  }
+  
+  .nav-footer {
+    display: none;
+  }
+}
