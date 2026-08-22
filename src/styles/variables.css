@@ -1,0 +1,85 @@
+:root {
+  /* Light Mode */
+  --bg-primary: #f5f7fa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f0f2f6;
+  --bg-hover: #f0f2f6;
+  --bg-input: #f5f7fa;
+  --bg-card: #ffffff;
+  --bg-sidebar: #ffffff;
+  
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a4a6a;
+  --text-muted: #8a8aa8;
+  
+  --border-color: #e8eaf0;
+  --border-light: #f0f2f6;
+  
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.1);
+  
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+  
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Priority Colors */
+  --priority-low: #22c55e;
+  --priority-low-bg: #f0fdf4;
+  --priority-medium: #eab308;
+  --priority-medium-bg: #fefce8;
+  --priority-high: #f97316;
+  --priority-high-bg: #fff7ed;
+  --priority-urgent: #ef4444;
+  --priority-urgent-bg: #fef2f2;
+  
+  /* Status Colors */
+  --status-todo: #94a3b8;
+  --status-todo-bg: #f1f5f9;
+  --status-progress: #3b82f6;
+  --status-progress-bg: #eff6ff;
+  --status-done: #22c55e;
+  --status-done-bg: #f0fdf4;
+  
+  /* Brand Colors */
+  --brand-500: #6366f1;
+  --brand-600: #4f46e5;
+  --brand-700: #4338ca;
+  
+  --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0a0a12;
+  --bg-secondary: #12121e;
+  --bg-tertiary: #1a1a2e;
+  --bg-hover: #1e1e36;
+  --bg-input: #0a0a12;
+  --bg-card: #16162a;
+  --bg-sidebar: #0e0e1a;
+  
+  --text-primary: #e8e8f0;
+  --text-secondary: #9898b8;
+  --text-muted: #5a5a7a;
+  
+  --border-color: #1e1e36;
+  --border-light: #2a2a42;
+  
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.6);
+  
+  --priority-low-bg: rgba(34, 197, 94, 0.1);
+  --priority-medium-bg: rgba(234, 179, 8, 0.1);
+  --priority-high-bg: rgba(249, 115, 22, 0.1);
+  --priority-urgent-bg: rgba(239, 68, 68, 0.1);
+  
+  --status-todo-bg: rgba(148, 163, 184, 0.1);
+  --status-progress-bg: rgba(59, 130, 246, 0.1);
+  --status-done-bg: rgba(34, 197, 94, 0.1);
+}
